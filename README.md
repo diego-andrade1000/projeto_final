@@ -16,12 +16,12 @@
 * APACHE 2.4.46
 
 # Configuração de ambiente (Back-end)
-* JDK 14 (Java Development Kit) -> https://www.oracle.com/br/java/technologies/javase/jdk14-archive-downloads.html 
+* <a href="https://www.oracle.com/br/java/technologies/javase/jdk14-archive-downloads.html">🔗 JDK 14</a>
 * Adicionar variáveis de ambiente Java
-* APACHE Maven -> https://maven.apache.org/download.cgi
+* <a href="https://maven.apache.org/download.cgi">🔗 APACHE Maven</a>
 * Rodar o comando "mvn clean install" (pode ser necessário usar mvnw caso o comando não execute corretamente) dentro da pasta backend 
 * Para rodar o projeto, executar o comando "mvn spring-boot:run"
-* Recomendável utilizar a IDE IntelliJ Idea -> https://www.jetbrains.com/pt-br/idea/download/
+* Recomendável utilizar a IDE <a href="https://www.jetbrains.com/pt-br/idea/download/">🔗 IntelliJ Idea</a>
 
 # Configuração de ambiente (Front-end)
 * Instalar o NPM na máquina -> www.nodejs.org
