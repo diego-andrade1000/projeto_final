@@ -28,3 +28,8 @@
 * Rodar na pasta frontend o comando "npm install" 
 * Para rodar o projeto, executar o comando "npm run"
 * Recomendável utilizar a IDE Visual Studio -> https://code.visualstudio.com/
+
+# Regras de Git, padronização de código e indentação padrão do projeto
+* Primeiramente, para que haja a organização das funções utilizadas para documentar o projeto, deverá ser criada uma pasta para cada atividade que foi declarada na planilha com as tarefas para o projeto final, e a cada tarefa bem sucedida - ou que foi relativamente adiantada - deverá ser feito o push no repositório do projeto no Github. 
+* O código do projeto em si deverá ser posto em uma pasta específica, contendo o CRUD por exemplo. Quando um membro do grupo desejar fazer alguma alteração em alguma funcionalidade, deverá obrigatoriamente fazer um git pull do repositório do github.
+
