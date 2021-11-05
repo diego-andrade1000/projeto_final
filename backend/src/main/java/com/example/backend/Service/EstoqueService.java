@@ -20,4 +20,22 @@ public class EstoqueService {
     public List<Estoque> getAll(){
         return estoqueRepository.findAll();
     }
+
+    public Estoque save(Estoque produto){
+        estoqueRepository.save(produto);
+        return produto;
+    }
+
+    public Estoque update(Long id, Estoque produto){
+        var produtoVelho = estoqueRepository.findById(id);
+        produtoVelho.setNome(produto.getNome());
+        produtoVelho.setQuantidade(produto.getQuantidade());
+        produtoVelho.setValor(produto.getValor());
+        return produto;
+    }
+
+    public void delete(Long id){
+        var produtoDeletado = estoqueRepository.findById(id);
+        estoqueRepository.delete(produtoDeletado);
+    }
 }

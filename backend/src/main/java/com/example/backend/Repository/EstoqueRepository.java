@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface EstoqueRepository extends JpaRepository<Estoque, String> {
     List<Estoque> findAll();
+    Estoque findById(Long id);
 }
