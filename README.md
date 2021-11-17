@@ -33,3 +33,7 @@
 * Primeiramente, para que haja a organização das funções utilizadas para documentar o projeto, deverá ser criada uma pasta para cada atividade que foi declarada na planilha com as tarefas para o projeto final, e a cada tarefa bem sucedida - ou que foi relativamente adiantada - deverá ser feito o push no repositório do projeto no Github. 
 * O código do projeto em si deverá ser posto em uma pasta específica, contendo o CRUD por exemplo. Quando um membro do grupo desejar fazer alguma alteração em alguma funcionalidade, deverá obrigatoriamente fazer um git pull do repositório do github.
 
+# Diretórios do repositório
+* Diagramas de classes, sequencia e casos de uso -> 
+* Padrões adotados ->
+* Prototipação ->
