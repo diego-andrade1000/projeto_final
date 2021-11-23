@@ -1,8 +1,8 @@
 package com.example.backend.Controller;
 
 
-import com.example.backend.Domain.Estoque;
-import com.example.backend.Service.EstoqueService;
+import com.example.backend.Domain.Caixa;
+import com.example.backend.Service.CaixaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,38 +17,38 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/estoque")
-public class EstoqueController{
+@RequestMapping("/api/caixa")
+public class CaixaController {
 
-    private final EstoqueService estoqueSerivce;
+    private final CaixaService caixaService;
 
-    public EstoqueController(
-            EstoqueService estoqueSerivce
+    public CaixaController(
+            CaixaService caixaService
     ){
-        this.estoqueSerivce = estoqueSerivce;
+        this.caixaService = caixaService;
     }
 
     @GetMapping
-    public ResponseEntity<List<Estoque>> getAll() {
-        List<Estoque> produtos = estoqueSerivce.getAll();
-        return ResponseEntity.ok(produtos);
+    public ResponseEntity<List<Caixa>> getAll() {
+        List<Caixa> caixas = caixaService.getAll();
+        return ResponseEntity.ok(caixas);
     }
 
     @PostMapping
-    public ResponseEntity<Estoque> save(@RequestBody Estoque produto){
-        estoqueSerivce.save(produto);
-        return ResponseEntity.ok(produto);
+    public ResponseEntity<Caixa> save(@RequestBody Caixa caixa){
+        caixaService.save(caixa);
+        return ResponseEntity.ok(caixa);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estoque> update(@PathVariable("id") Long id ,@RequestBody Estoque produto){
-        estoqueSerivce.update(id, produto);
-        return ResponseEntity.ok(produto);
+    public ResponseEntity<Caixa> update(@PathVariable("id") Long id ,@RequestBody Caixa caixa){
+        caixaService.update(id, caixa);
+        return ResponseEntity.ok(caixa);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") Long id){
-        estoqueSerivce.delete(id);
+        caixaService.delete(id);
         return new ResponseEntity(HttpStatus.OK);
     }
 }

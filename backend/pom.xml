@@ -59,6 +59,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.zalando</groupId>
+            <artifactId>problem</artifactId>
+            <version>0.25.0</version>
+        </dependency>
     </dependencies>
 
     <build>
