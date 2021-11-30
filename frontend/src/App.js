@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import  { Col, Row} from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { SnackbarProvider } from 'notistack';
+import Header from './components/Header';
+import Sidebar from './components/SideBar';
+import AllRoute from './allRoute';
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+const App = () => (
+    <BrowserRouter basename={process.env.REACT_APP_STAGE}>
+      <SnackbarProvider maxSnack={3}>
+          <Header/>
+          <Row>
+            <Col md={2}>
+                <Sidebar/>
+            </Col>
+            <Col md={10}>
+                <AllRoute/>
+            </Col>
+          </Row>
+      </SnackbarProvider>
+    </BrowserRouter>
+);
 
 export default App;

@@ -1,0 +1,29 @@
+.card{
+    background-color: #DEE2E6;
+    width: 25rem;
+    margin-right: 50px;
+    margin-top: 50px;
+
+}
+
+.linha{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao{
+    margin: 20px 0px 0px 90px;
+    width: 180px;
+}
+.corBotao{
+    background-color: #052C65;
+}
+
+.titulo{
+    font-size: 26px;
+}
+
+.geral{
+    padding: 100px 0px 200px 100px;
+}
+

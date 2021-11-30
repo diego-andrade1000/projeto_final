@@ -1,0 +1,6 @@
+.Nav{
+    background-color: #052C65;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: space-between !important;
+};
