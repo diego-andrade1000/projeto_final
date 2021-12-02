@@ -56,7 +56,7 @@ public class TransacaoService {
             }else{
                 valorTotal = 0 + Double.parseDouble(transacao.getValor());
             }
-            caixaService.save(new Caixa(null, transacao.getValor(), String.valueOf(valorTotal), LocalDateTime.now()));
+            caixaService.save(new Caixa(transacao.getValor(), null, String.valueOf(valorTotal), LocalDateTime.now()));
             transacaoRepository.save(transacao);
             return transacao;
         }else{
@@ -70,7 +70,7 @@ public class TransacaoService {
             }else{
                 throw new GenericHTTPException("Valor em caixa não suficiente", Status.UNAUTHORIZED);
             }
-            caixaService.save(new Caixa(transacao.getValor(), null, String.valueOf(valorTotal), LocalDateTime.now()));
+            caixaService.save(new Caixa(null , transacao.getValor(), String.valueOf(valorTotal), LocalDateTime.now()));
             transacaoRepository.save(transacao);
             return transacao;
         }

@@ -1,9 +1,7 @@
 package com.example.backend.Controller;
 
 
-import com.example.backend.Domain.Estoque;
 import com.example.backend.Domain.Transacao;
-import com.example.backend.Service.EstoqueService;
 import com.example.backend.Service.TransacaoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

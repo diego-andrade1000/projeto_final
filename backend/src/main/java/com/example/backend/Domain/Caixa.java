@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "estoque")
+@Table(name = "caixa")
 @SequenceGenerator(name = "cai_seq", sequenceName = "caixa_seq", initialValue = 1, allocationSize = 1)
 public class Caixa implements Serializable {
 

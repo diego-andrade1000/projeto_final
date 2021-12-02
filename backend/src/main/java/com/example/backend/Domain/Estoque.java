@@ -31,7 +31,7 @@ public class Estoque implements Serializable {
     private String nome;
 
     @Column(name = "quantidade")
-    private Long quantidade;
+    private int quantidade;
 
     @Column(name = "valor")
     private String valor;
@@ -40,7 +40,7 @@ public class Estoque implements Serializable {
 
     public Estoque(
             String nome,
-            Long quantidade,
+            int quantidade,
             String valor
     ){
         this.nome = nome;

@@ -3,36 +3,27 @@ package com.example.backend.Controller;
 import com.example.backend.Domain.User;
 import com.example.backend.Exception.GenericHTTPException;
 import com.example.backend.Repository.UserRepository;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zalando.problem.Status;
 
-import javax.validation.Valid;
-
-import static java.util.regex.Pattern.matches;
 
 
 /**
      * Controller to authenticate users.
      */
     @RestController
-    @Transactional
     @RequestMapping("/api")
-    @EnableAutoConfiguration
-    @ComponentScan
-    public class UserJWTController {
+    public class LoginController {
 
         private final UserRepository userRepository;
         private final PasswordEncoder passwordEncoder;
 
-        public UserJWTController(
+        public LoginController(
                 UserRepository userRepository,
                 PasswordEncoder passwordEncoder
                 ) {
@@ -52,7 +43,5 @@ import static java.util.regex.Pattern.matches;
             }
             return ResponseEntity.ok(user);
         }
-
-
 
 }

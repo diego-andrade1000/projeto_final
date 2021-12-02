@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "estoque")
+@Table(name = "distribuidor")
 @SequenceGenerator(name = "dis_seq", sequenceName = "distribuidor_seq", initialValue = 1, allocationSize = 1)
 public class Distribuidor implements Serializable {
 
