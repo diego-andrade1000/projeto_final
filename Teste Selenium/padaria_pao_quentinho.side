@@ -1,0 +1,296 @@
+{
+  "id": "3e27f19a-3843-47f3-b36f-88592780cf83",
+  "version": "2.0",
+  "name": "padaria_pao_quentinho",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "e30fed88-163b-4b8c-baf9-3107d3633e61",
+    "name": "CT01SALVAR_PRODUTO",
+    "commands": [{
+      "id": "535b6306-8426-43a9-aeb2-5afdd72ed671",
+      "comment": "Abre a janela do localhost",
+      "command": "open",
+      "target": "/estoque",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fd51eff-f778-4385-a2a0-af3e0dbb4c27",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c2953e9-b981-465b-884f-32a21fef22c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ Novo produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7240e531-3709-481a-aed7-fabdd3ec2143",
+      "comment": "",
+      "command": "click",
+      "target": "id=nomeProduto",
+      "targets": [
+        ["id=nomeProduto", "id"],
+        ["css=#nomeProduto", "css:finder"],
+        ["xpath=//input[@id='nomeProduto']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e52dc863-b87e-47b9-b72c-5a131169c1bb",
+      "comment": "",
+      "command": "type",
+      "target": "id=nomeProduto",
+      "targets": [
+        ["id=nomeProduto", "id"],
+        ["css=#nomeProduto", "css:finder"],
+        ["xpath=//input[@id='nomeProduto']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "arroz"
+    }, {
+      "id": "65e29787-d975-42c1-b89e-6955b63beda8",
+      "comment": "",
+      "command": "click",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9a50284-a030-49f3-be93-fe185c67085b",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "23"
+    }, {
+      "id": "b8aff3bc-4095-4385-8b24-afc2c9026355",
+      "comment": "",
+      "command": "click",
+      "target": "id=valor",
+      "targets": [
+        ["id=valor", "id"],
+        ["css=#valor", "css:finder"],
+        ["xpath=//input[@id='valor']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13a3d962-a172-40b1-a3af-dde6c1014677",
+      "comment": "",
+      "command": "type",
+      "target": "id=valor",
+      "targets": [
+        ["id=valor", "id"],
+        ["css=#valor", "css:finder"],
+        ["xpath=//input[@id='valor']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "19"
+    }, {
+      "id": "fee2ae71-6d98-4c1a-9b8f-eb644ca1b851",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "edc5465e-f7a1-4f65-8338-0f3103ac10a4",
+    "name": "CT02SALVAR_DISTRIBUIDOR",
+    "commands": [{
+      "id": "720fe8a8-8d2d-41b0-9e20-244634ab3c8a",
+      "comment": "",
+      "command": "open",
+      "target": "/estoque",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a58a63fe-04e3-4cd5-b9f0-dde00fa7b87a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7ce3aee-6872-4b8a-b894-868bae6f6577",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Distribuidores",
+      "targets": [
+        ["linkText=Distribuidores", "linkText"],
+        ["css=.linha:nth-child(3) .link", "css:finder"],
+        ["xpath=//a[contains(text(),'Distribuidores')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[3]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/distribuidor')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Distribuidores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc5dde5a-0861-48a1-a452-3a079f6856d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ Novo distribuidor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4779e90-bc0f-4930-9c86-56e4fefcc342",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52280e3c-5dc6-4791-beb8-4ec5d596199b",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Joao"
+    }, {
+      "id": "718985c4-c564-43e0-9603-1a7e5c523dbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(2)",
+      "targets": [
+        ["css=.mb-3:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51b3b945-8cbd-4e46-8cc5-a06ffe0fbc4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=telefone",
+      "targets": [
+        ["id=telefone", "id"],
+        ["css=#telefone", "css:finder"],
+        ["xpath=//input[@id='telefone']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3275be64-38cc-4e24-9114-7463dbdf044c",
+      "comment": "",
+      "command": "type",
+      "target": "id=telefone",
+      "targets": [
+        ["id=telefone", "id"],
+        ["css=#telefone", "css:finder"],
+        ["xpath=//input[@id='telefone']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "3599998726"
+    }, {
+      "id": "71e09ee8-e776-483b-994c-032d5f4f2ca7",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c831343-0eaf-455a-a474-c0e9851598fb",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "joaoalmeidabarbosajr@gmail.com"
+    }, {
+      "id": "a5515bd5-0ec4-4c80-b9f2-3f204cb48a65",
+      "comment": "",
+      "command": "click",
+      "target": "id=registro",
+      "targets": [
+        ["id=registro", "id"],
+        ["css=#registro", "css:finder"],
+        ["xpath=//input[@id='registro']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "402cdf1e-d766-4b72-97e7-043674e9b15c",
+      "comment": "",
+      "command": "type",
+      "target": "id=registro",
+      "targets": [
+        ["id=registro", "id"],
+        ["css=#registro", "css:finder"],
+        ["xpath=//input[@id='registro']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "rua das flores, 243"
+    }, {
+      "id": "3349fe18-cb27-4ec2-9718-6da46355591a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(6)",
+      "targets": [
+        ["css=.btn:nth-child(6)", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar distribuidor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bba954ef-f3aa-4098-8403-b3cf8070c574",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e30fed88-163b-4b8c-baf9-3107d3633e61"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
