@@ -5,12 +5,14 @@ import Transacao from '../components/Transacao';
 import Produtos from '../components/Produtos';
 import Distribuidores from '../components/Distribuidores';
 import Caixa from '../components/Caixa';
+import Login from '../components/Login';
 
 
 export default function AllRoute (){
     return(
     <>
         <Routes>
+          <Route path='/login' element={<Login/>} />
           <Route path='/' element={<Menu/>} />
           <Route path='/estoque' element={<Produtos/>}/>
           <Route path='/distribuidor' element={<Distribuidores/>}/>
