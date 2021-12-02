@@ -1,0 +1,15 @@
+.title{
+    font-size: 36px;
+    color:#000000;
+    margin-bottom: 50px;
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+}
+.linha2{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+}
