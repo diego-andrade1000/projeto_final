@@ -47,8 +47,6 @@ public class User implements Serializable {
     @Column(length = 254, unique = true, name = "email")
     private String email;
 
-
-
     @NotNull
     @Column(name = "authority")
     private String authoritie;

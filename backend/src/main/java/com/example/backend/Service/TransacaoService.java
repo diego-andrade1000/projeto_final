@@ -35,9 +35,9 @@ public class TransacaoService {
 
     public List<Transacao> getAll(){
         List<Transacao> transacoes = transacaoRepository.findAll();
-        if(transacoes == null || transacoes.isEmpty()){
-            throw new GenericHTTPException("Nenhuma transação encontrada", Status.NOT_FOUND);
-        }
+//        if(transacoes == null || transacoes.isEmpty()){
+//            throw new GenericHTTPException("Nenhuma transação encontrada", Status.NOT_FOUND);
+//        }
         return transacoes;
     }
 
@@ -77,8 +77,8 @@ public class TransacaoService {
     }
 
     public void transacaoProduto(String valorTotal, String valorUnitario, Estoque produto, Boolean compraOuVenda){
-        var numeroTotal = Double.parseDouble(valorTotal);
-        var numeroUnitario = Double.parseDouble(valorUnitario);
+        var numeroTotal = Double.parseDouble(valorTotal.replace(",", "."));
+        var numeroUnitario = Double.parseDouble(valorUnitario.replace(",", "."));
         var quantidade = numeroTotal / numeroUnitario;
         if(compraOuVenda){
             if(produto.getQuantidade() >= quantidade){

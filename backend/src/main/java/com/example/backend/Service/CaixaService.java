@@ -21,9 +21,9 @@ public class CaixaService {
 
     public List<Caixa> getAll(){
         List<Caixa> caixas = caixaRepository.findAll();
-        if(caixas == null || caixas.isEmpty()){
-            throw new GenericHTTPException("Nenhum caixa encontrado", Status.NOT_FOUND);
-        }
+        // if(caixas == null || caixas.isEmpty()){
+        //     throw new GenericHTTPException("Nenhum caixa encontrado", Status.NOT_FOUND);
+        // }
         return caixas;
     }
 

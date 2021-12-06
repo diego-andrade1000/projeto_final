@@ -15,6 +15,9 @@ const Distribuidores = () => {
     const [showModalCadastro, setShowModalCadastro] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [idAtual, setIdAtual] = useState(0);
+    const validation = () => {
+        return !!nomeDistribuidor.trim() && !!emailDistribuidor.trim() && !!registroDistribuidor.trim(); 
+    }
     const getAllDistribuidor = () => {
         api
             .get('/api/distribuidor')
@@ -109,7 +112,7 @@ const Distribuidores = () => {
             <th>Nome do distribuidor</th>
             <th>Telefone</th>
             <th>Email</th>
-            <th>Opções</th>
+            <th>Registro</th>
             </tr>
         </thead>
         <tbody>
@@ -162,8 +165,8 @@ const Distribuidores = () => {
                     </Form.Group>
                     <Button variant="secondary" onClick={() => {setShowModalCadastro(false); setShowModal(false)}}>Cancelar</Button>
                     {showModalCadastro ?
-                        <Button onClick={() => {cadastrarDistribuidor(); setShowModal(false); setShowModalCadastro(false)}} type="button" variant="primary" >Salvar distribuidor</Button>
-                        :   <Button onClick={() => {editarDistribuidor(idAtual); setShowModal(false)}} type="button" variant="primary" >Salvar distribuidor</Button>
+                        <Button onClick={() => {cadastrarDistribuidor(); setShowModal(false); setShowModalCadastro(false)}} type="button" disabled={!validation()} variant="primary" >Salvar distribuidor</Button>
+                        :   <Button onClick={() => {editarDistribuidor(idAtual); setShowModal(false)}} type="button" disabled={!validation()} variant="primary" >Salvar distribuidor</Button>
                     }    
                 </Form>
             </Modal.Body>
