@@ -67,29 +67,45 @@ const Produtos = () => {
             quantidade: quantidadeProduto,
             valor: valorProduto
         }
-        api
-            .put(`/api/estoque/${id}`, product).catch((err) =>{
+        api.put(`/api/estoque/${id}`, product).then(() =>{
+                enqueueSnackbar("Produto editado com sucesso! Por favor, atualize a página.", {
+                    variant: 'success',
+                    anchorOrigin: {
+                        vertical: 'top',
+                        horizontal: 'center',
+                    },
+                    preventDuplicate: true,
+            })
+        }).catch((err) =>{
                 enqueueSnackbar("Erro ao editar o produto." || err.message, {
-                variant: 'error',
-                anchorOrigin: {
-                    vertical: 'top',
-                    horizontal: 'center',
-                },
-                preventDuplicate: true,
+                    variant: 'error',
+                    anchorOrigin: {
+                        vertical: 'top',
+                        horizontal: 'center',
+                    },
+                    preventDuplicate: true,
             })
             })
     }
 
     const deletar = (id) => {
-        api
-            .delete(`/api/estoque/${id}`).catch((err) =>{
+        api.delete(`/api/estoque/${id}`).then(() =>{
+                enqueueSnackbar("Produto deletado com sucesso! Por favor, atualize a página.", {
+                    variant: 'success',
+                    anchorOrigin: {
+                        vertical: 'top',
+                        horizontal: 'center',
+                    },
+                    preventDuplicate: true,
+                })
+            }).catch((err) =>{
                 enqueueSnackbar("Erro ao editar o produto." || err.message, {
-                variant: 'error',
-                anchorOrigin: {
-                    vertical: 'top',
-                    horizontal: 'center',
-                },
-                preventDuplicate: true,
+                    variant: 'error',
+                    anchorOrigin: {
+                        vertical: 'top',
+                        horizontal: 'center',
+                    },
+                    preventDuplicate: true,
             })
             })
     }

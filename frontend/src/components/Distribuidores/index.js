@@ -43,7 +43,7 @@ const Distribuidores = () => {
             registro: registroDistribuidor
         }
         api.post('/api/distribuidor', distribuidor).then(()=>{
-                enqueueSnackbar("Distribuidor salvo com sucesso! Por favor, atualize a página.", {
+            enqueueSnackbar("Distribuidor salvo com sucesso! Por favor, atualize a página.", {
                 variant: 'success',
                 anchorOrigin: {
                     vertical: 'top',
@@ -52,7 +52,7 @@ const Distribuidores = () => {
                 preventDuplicate: true,
             })
         }).catch((err) =>{
-                enqueueSnackbar("Erro ao salvar o distribuidor." || err.message, {
+            enqueueSnackbar("Erro ao salvar o distribuidor." || err.message, {
                 variant: 'error',
                 anchorOrigin: {
                     vertical: 'top',
@@ -69,9 +69,17 @@ const Distribuidores = () => {
             email: emailDistribuidor,
             registro: registroDistribuidor
         }
-        api
-            .put(`/api/distribuidor/${id}`, distribuidor).catch((err) =>{
-                enqueueSnackbar("Erro ao editar o distribuidor." || err.message, {
+        api.put(`/api/distribuidor/${id}`, distribuidor).then(()=>{
+            enqueueSnackbar("Distribuidor editado com sucesso! Por favor, atualize a página.", {
+                variant: 'sucess',
+                anchorOrigin: {
+                    vertical: 'top',
+                    horizontal: 'center',
+                },
+                preventDuplicate: true,
+            })
+        }).catch((err) =>{
+            enqueueSnackbar("Erro ao editar o distribuidor." || err.message, {
                 variant: 'error',
                 anchorOrigin: {
                     vertical: 'top',
@@ -83,9 +91,17 @@ const Distribuidores = () => {
     }
 
     const deletar = (id) => {
-        api
-            .delete(`/api/distribuidor/${id}`).catch((err) =>{
-                enqueueSnackbar("Erro ao editar o distribuidor." || err.message, {
+        api.delete(`/api/distribuidor/${id}`).then(()=>{
+            enqueueSnackbar("Distribuidor excluído com sucesso! Por favor, atualize a página.", {
+                variant: 'success',
+                anchorOrigin: {
+                    vertical: 'top',
+                    horizontal: 'center',
+                },
+                preventDuplicate: true,
+            })
+        }).catch((err) =>{
+            enqueueSnackbar("Erro ao editar o distribuidor." || err.message, {
                 variant: 'error',
                 anchorOrigin: {
                     vertical: 'top',

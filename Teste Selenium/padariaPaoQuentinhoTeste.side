@@ -1,0 +1,368 @@
+{
+  "id": "fcbe6c14-a87c-45b7-b291-b922c0021317",
+  "version": "2.0",
+  "name": "padariaPaoQuentinho",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "92e9cabf-7967-45ae-a12b-472c9722c039",
+    "name": "CT01SALVARPRODUTO",
+    "commands": [{
+      "id": "2e1de28c-209e-46b5-81be-2172a947a5c0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "685eef6d-ec21-46c8-a788-875a8881a7e6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed65e798-386d-476a-8fba-47586b4ad80d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .card:nth-child(1) .corBotao",
+      "targets": [
+        ["css=.row:nth-child(1) > .card:nth-child(1) .corBotao", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Saiba mais')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0b46005-15de-4992-9172-473bfc43f80c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ Novo produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "584dfc55-7e46-443a-9611-a6654bc1af4e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ Novo produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4c4fe5f-f9a5-43e6-9dd2-88f3c33beadf",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+ Novo produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "adfb40a0-39f3-4350-84c4-9250c56dcf15",
+      "comment": "",
+      "command": "click",
+      "target": "id=nomeProduto",
+      "targets": [
+        ["id=nomeProduto", "id"],
+        ["css=#nomeProduto", "css:finder"],
+        ["xpath=//input[@id='nomeProduto']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78bbcbd5-0cb6-4617-a190-0a810618b917",
+      "comment": "",
+      "command": "type",
+      "target": "id=nomeProduto",
+      "targets": [
+        ["id=nomeProduto", "id"],
+        ["css=#nomeProduto", "css:finder"],
+        ["xpath=//input[@id='nomeProduto']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Paçoca"
+    }, {
+      "id": "74e54855-b5ab-4be6-a74f-1c4539b59ff4",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "34"
+    }, {
+      "id": "965ccff9-1ec1-49a1-b13c-f677940a9f7b",
+      "comment": "",
+      "command": "click",
+      "target": "id=valor",
+      "targets": [
+        ["id=valor", "id"],
+        ["css=#valor", "css:finder"],
+        ["xpath=//input[@id='valor']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fd6e72b-2728-482a-941c-58d57ff3c2a2",
+      "comment": "",
+      "command": "type",
+      "target": "id=valor",
+      "targets": [
+        ["id=valor", "id"],
+        ["css=#valor", "css:finder"],
+        ["xpath=//input[@id='valor']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0,50"
+    }, {
+      "id": "68a40620-a05e-4ef9-91ef-e073dd8dfffb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2dcd0d38-d078-4b91-8fbf-acb6082645df",
+      "comment": "",
+      "command": "click",
+      "target": "id=notistack-snackbar",
+      "targets": [
+        ["id=notistack-snackbar", "id"],
+        ["css=#notistack-snackbar", "css:finder"],
+        ["xpath=//div[@id='notistack-snackbar']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f578af7e-de2c-477b-826b-b1645bf2eda9",
+    "name": "CT02DELETARPRODUTO",
+    "commands": [{
+      "id": "4d7cfccf-d621-4db6-89e1-bcb30be0294c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dabecd63-2001-415c-98a0-f584557a2b5a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dba9c7e3-be08-484b-92ca-84c97b030a21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .card:nth-child(1) .corBotao",
+      "targets": [
+        ["css=.row:nth-child(1) > .card:nth-child(1) .corBotao", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Saiba mais')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e598f95b-0ded-42e0-8477-81523166e9fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) .col-md-2 > .btn",
+      "targets": [
+        ["css=tr:nth-child(5) .col-md-2 > .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/table/tbody/tr[5]/td[5]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[5]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "975d2c05-1bbe-44f0-a344-7f16ec7c2d28",
+      "comment": "",
+      "command": "click",
+      "target": "id=notistack-snackbar",
+      "targets": [
+        ["id=notistack-snackbar", "id"],
+        ["css=#notistack-snackbar", "css:finder"],
+        ["xpath=//div[@id='notistack-snackbar']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8fcb1ccf-44f1-4d8d-94bf-6733c1df1d64",
+    "name": "CT03EDITARPRODUTO",
+    "commands": [{
+      "id": "a0d10608-d338-4e9e-a6be-dadb76b00c95",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ecfa311-159a-4349-bb2b-b8e35be74214",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d612bcea-8e1f-404b-ac82-85f8ee705f81",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .card:nth-child(1) .corBotao",
+      "targets": [
+        ["css=.row:nth-child(1) > .card:nth-child(1) .corBotao", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Saiba mais')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31f5f6a1-bf39-46d9-addf-15593228de13",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) .col-md-4 > .btn",
+      "targets": [
+        ["css=tr:nth-child(3) .col-md-4 > .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/table/tbody/tr[3]/td[5]/div/div/button", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[5]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "780a41f7-2308-48a4-9765-67f12a9faa87",
+      "comment": "",
+      "command": "click",
+      "target": "id=nomeProduto",
+      "targets": [
+        ["id=nomeProduto", "id"],
+        ["css=#nomeProduto", "css:finder"],
+        ["xpath=//input[@id='nomeProduto']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5321bb3a-e913-42e1-9c20-f29fd0191c5a",
+      "comment": "",
+      "command": "type",
+      "target": "id=nomeProduto",
+      "targets": [
+        ["id=nomeProduto", "id"],
+        ["css=#nomeProduto", "css:finder"],
+        ["xpath=//input[@id='nomeProduto']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Leite Cemil"
+    }, {
+      "id": "98eb0f1a-f732-4f3f-8fd1-3e0d2bf8cd96",
+      "comment": "",
+      "command": "click",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c209b9d6-f52d-4bf1-aa03-90b66473d624",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "23"
+    }, {
+      "id": "89227858-c7cb-4594-b8bb-5e1ea7c4722e",
+      "comment": "",
+      "command": "click",
+      "target": "id=valor",
+      "targets": [
+        ["id=valor", "id"],
+        ["css=#valor", "css:finder"],
+        ["xpath=//input[@id='valor']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91b9629d-5ab7-4f43-b554-ce804ad1e065",
+      "comment": "",
+      "command": "type",
+      "target": "id=valor",
+      "targets": [
+        ["id=valor", "id"],
+        ["css=#valor", "css:finder"],
+        ["xpath=//input[@id='valor']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "1,99"
+    }, {
+      "id": "50d95d5e-c973-49cb-9b44-12c7c114c683",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c974b7a5-d7b2-4fc8-aa3d-b464622e4e47",
+      "comment": "",
+      "command": "click",
+      "target": "id=notistack-snackbar",
+      "targets": [
+        ["id=notistack-snackbar", "id"],
+        ["css=#notistack-snackbar", "css:finder"],
+        ["xpath=//div[@id='notistack-snackbar']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5b10160b-8d09-4b83-96c0-487d4bf6f1df",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
