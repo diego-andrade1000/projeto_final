@@ -21,9 +21,9 @@ public class EstoqueService {
 
     public List<Estoque> getAll(){
         List<Estoque> produtos = estoqueRepository.findAll();
-        // if(produtos == null || produtos.isEmpty()){
-        //     throw new GenericHTTPException("Nenhum produto encontrado", Status.NOT_FOUND);
-        // }
+        if(produtos == null || produtos.isEmpty()){
+            throw new GenericHTTPException("Nenhum produto encontrado", Status.NOT_FOUND);
+        }
         return produtos;
     }
 

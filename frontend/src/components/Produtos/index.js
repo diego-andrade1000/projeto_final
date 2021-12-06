@@ -15,7 +15,7 @@ const Produtos = () => {
     const [showModal, setShowModal] = useState(false);
     const [idAtual, setIdAtual] = useState(0);
     const validation = () => {
-        return !!nomeProduto.trim() && !!valorProduto.trim() && quantidadeProduto > 0; 
+        return !!nomeProduto.trim() && valorProduto.trim() && quantidadeProduto > 0; 
     }
     const getAllProducts = () => {
         api
@@ -41,8 +41,16 @@ const Produtos = () => {
             quantidade: quantidadeProduto,
             valor: valorProduto
         }
-        api
-            .post('/api/estoque', product).catch((err) =>{
+        api.post('/api/estoque', product).then(()=>{
+            enqueueSnackbar("Produto salvo com sucesso! Por favor, atualize a página.", {
+                variant: 'success',
+                anchorOrigin: {
+                    vertical: 'top',
+                    horizontal: 'center',
+                },
+                preventDuplicate: true,
+            })
+        }).catch((err) =>{
                 enqueueSnackbar("Erro ao salvar o produto." || err.message, {
                 variant: 'error',
                 anchorOrigin: {
@@ -75,7 +83,7 @@ const Produtos = () => {
     const deletar = (id) => {
         api
             .delete(`/api/estoque/${id}`).catch((err) =>{
-                enqueueSnackbar("Erro ao excluir o produto." || err.message, {
+                enqueueSnackbar("Erro ao editar o produto." || err.message, {
                 variant: 'error',
                 anchorOrigin: {
                     vertical: 'top',
@@ -158,8 +166,8 @@ const Produtos = () => {
                     </Form.Group>
                     <Button variant="secondary" onClick={() => {setShowModalCadastro(false); setShowModal(false)}}>Cancelar</Button>
                     {showModalCadastro ?
-                        <Button onClick={() => {cadastrarProduto(); setShowModal(false); setShowModalCadastro(false)}} type="button" disabled={!validation()} variant="primary">Salvar produto</Button>
-                        :   <Button onClick={() => {editarProduto(idAtual); setShowModal(false)}} type="button" disabled={!validation()} variant="primary">Salvar produto</Button>
+                        <Button onClick={() => {cadastrarProduto(); setShowModal(false); setShowModalCadastro(false)}} type="button" variant="primary" disabled={!validation()}>Salvar produto</Button>
+                        :   <Button onClick={() => {editarProduto(idAtual); setShowModal(false)}} type="button" variant="primary" disabled={!validation()}>Salvar produto</Button>
                     }    
                 </Form>
             </Modal.Body>

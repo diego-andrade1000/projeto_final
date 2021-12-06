@@ -42,8 +42,16 @@ const Distribuidores = () => {
             email: emailDistribuidor,
             registro: registroDistribuidor
         }
-        api
-            .post('/api/distribuidor', distribuidor).catch((err) =>{
+        api.post('/api/distribuidor', distribuidor).then(()=>{
+                enqueueSnackbar("Distribuidor salvo com sucesso! Por favor, atualize a página.", {
+                variant: 'success',
+                anchorOrigin: {
+                    vertical: 'top',
+                    horizontal: 'center',
+                },
+                preventDuplicate: true,
+            })
+        }).catch((err) =>{
                 enqueueSnackbar("Erro ao salvar o distribuidor." || err.message, {
                 variant: 'error',
                 anchorOrigin: {
@@ -112,7 +120,7 @@ const Distribuidores = () => {
             <th>Nome do distribuidor</th>
             <th>Telefone</th>
             <th>Email</th>
-            <th>Registro</th>
+            <th>Opções</th>
             </tr>
         </thead>
         <tbody>
@@ -165,8 +173,8 @@ const Distribuidores = () => {
                     </Form.Group>
                     <Button variant="secondary" onClick={() => {setShowModalCadastro(false); setShowModal(false)}}>Cancelar</Button>
                     {showModalCadastro ?
-                        <Button onClick={() => {cadastrarDistribuidor(); setShowModal(false); setShowModalCadastro(false)}} type="button" disabled={!validation()} variant="primary" >Salvar distribuidor</Button>
-                        :   <Button onClick={() => {editarDistribuidor(idAtual); setShowModal(false)}} type="button" disabled={!validation()} variant="primary" >Salvar distribuidor</Button>
+                        <Button onClick={() => {cadastrarDistribuidor(); setShowModal(false); setShowModalCadastro(false)}} type="button" variant="primary" disabled={!validation()}>Salvar distribuidor</Button>
+                        :   <Button onClick={() => {editarDistribuidor(idAtual); setShowModal(false)}} type="button" variant="primary" disabled={!validation()}>Salvar distribuidor</Button>
                     }    
                 </Form>
             </Modal.Body>

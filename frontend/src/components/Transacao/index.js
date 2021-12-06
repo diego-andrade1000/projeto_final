@@ -16,6 +16,9 @@ const Transacao = () => {
   const [showModalCadastro, setShowModalCadastro] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [idAtual, setIdAtual] = useState(0);
+  const validation = () =>{
+    return valorTransacao > 0 || valorTransacao > 0.0;
+  }
   const getAllTransacoes = () => {
     api
       .get("/api/transacao")
@@ -133,7 +136,7 @@ const Transacao = () => {
               setShowModalCadastro(true);
             }}
           >
-            + Novo transação
+            + Nova transação
           </Button>
         </Col>
         <Col md={2}>
@@ -191,7 +194,7 @@ const Transacao = () => {
               </>
             ))
           ) : (
-            <p> Não existe nenhum transação cadastrada. </p>
+            <p> Não existe nenhuma transação cadastrada. </p>
           )}
         </tbody>
         {
@@ -279,6 +282,7 @@ const Transacao = () => {
                       setShowModalCadastro(false);
                       console.log(compraOuVendaTransacao);
                     }}
+                    disabled={!validation()}
                     type="button"
                     variant="primary"
                   >

@@ -21,9 +21,9 @@ public class DistribuidorService {
 
     public List<Distribuidor> getAll(){
         List<Distribuidor> distribuidores = distribuidorRepository.findAll();
-        // if(distribuidores == null || distribuidores.isEmpty()){
-        //     throw new GenericHTTPException("Nenhum distribuidor encontrado", Status.NOT_FOUND);
-        // }
+        if(distribuidores == null || distribuidores.isEmpty()){
+            throw new GenericHTTPException("Nenhum distribuidor encontrado", Status.NOT_FOUND);
+        }
         return distribuidores;
     }
 
